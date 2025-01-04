@@ -1,39 +1,44 @@
-/* Header Styling for the top of every page */
 .HEAD {
     font-family: 'Arial Black', Arial, sans-serif;
     font-size: 80px;
-    color: white; /* Text color */
-    padding: 10px 20px; /* Adjust padding around the content */
-    background-color: black; /* Background color for the header */
-    position: fixed; /* Fixes the header at the top */
+    color: white;
+    padding: 0 20px; /* Remove vertical padding to avoid height mismatch */
+    background-color: black;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Makes the header span across the full width */
-    z-index: 1000; /* Ensures the header stays above other content */
+    width: 100%;
+    height: 120px; /* Explicit height for alignment */
     display: flex;
-    justify-content: space-between; /* Aligns the menu and title on opposite ends */
-    align-items: center; /* Vertically centers the content */
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
 }
 
 /* Menu button styling */
 .dropdown {
-    background-color: black; /* Ensures the background is the same as the header */
+    background-color: black;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: fixed; /* Keeps menu bar fixed in set location*/
+    top: 30px; /* Adjust this value to move up or down */
+    right: 0; /* Keeps menu at extreme right*/
 }
 
-/* Dropdown button appearance */
 .dropdown-toggle {
-    font-size: 18px; /* Adjust button size */
-    padding: 10px 20px; /* Adjust button padding */
-    background-color: black; /* Matches the button with the header */
-    border: none; /* Removes default border */
-    color: white; /* Sets button text color */
+    font-size: 18px;
+    padding: 15px 20px; /* Slightly more padding to align vertically */
+    background-color: black;
+    border: none;
+    color: white;
 }
 
 /* Dropdown menu items */
 .dropdown-menu {
-    background-color: black; /* Ensures the dropdown menu has a black background */
-    border: none; /* Removes borders from the dropdown */
-    color: white; /* Font color */
+    background-color: black;
+    border: none;
+    color: white;
 }
 
 /* Content below the header */
@@ -48,7 +53,7 @@
 body {
     background-color: white;
     margin: 0;
-    padding-top: 120px; /* Adds space for the fixed header */
+    padding-top: 120px;
 }
 
 /* Ensuring dropdown button and header text are aligned horizontally */
@@ -57,4 +62,5 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: nowrap;
 }
