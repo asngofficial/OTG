@@ -64,3 +64,25 @@ body {
     width: 100%;
     flex-wrap: nowrap;
 }
+
+.bi{
+    height: 100px;
+    width: 100px;
+}
+
+.icon-container svg{
+    fill: black;
+}
+
+/* move the position of the div container on CONTACT ME page... just trying to center the icons */
+.shift-up { 
+    position: relative;
+    top: 180px; /* Adjust the value as needed */
+}
+
+/* adjust the size of photo in ABOUT ME */
+.profile-pic {
+    width: 150px; /* Adjust to your desired size */
+    height: 150px; /* Ensures the aspect ratio remains 1:1 */
+    object-fit: cover; /* Makes sure the image fills the circle properly */
+}
