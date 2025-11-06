@@ -1,91 +1,158 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-<head>
+  <head>
     <title>OTG</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> <!-- Bootstrap css CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap icons CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap Js CDN -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Suggested by bootstrap for proper responsive behavior on mobile devices -->
-    <link rel="stylesheet" href="../css/otg-style.css"> <!-- My css file -->
-    <script src="../JS/otg-script.js"></script> <!-- My js file -->
-</head>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Suggested by bootstrap for proper responsive behavior on mobile devices -->
+    <link rel="stylesheet" href="../css/otg-style.css" />
+    <!-- My css file -->
+    <script src="../JS/otg-script.js"></script>
+    <!-- My js file -->
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-container d-flex justify-content-between align-items-center">
-            <h1 class="HEAD">PORTFOLIO</h1>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-list"></i> <!-- Hamburger icon from Bootstrap Icons -->
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="index.html">ABOUT ME</a></li>
-                    <li><a class="dropdown-item" href="OTG-PORTFOLIO.html">PORTFOLIO</a></li>
-                    <li><a class="dropdown-item" href="OTG-SHOP.html">SHOP</a></li>
-                    <li><a class="dropdown-item" href="OTG-SCHEDULE.html">SCHEDULE</a></li>
-                    <li><a class="dropdown-item" href="OTG-REVIEW.html">REVIEW</a></li>
-                    <li><a class="dropdown-item" href="OTG-CONTACT.html">CONTACT</a></li>
-                </ul>
-            </div>
+      <div
+        class="header-container d-flex justify-content-between align-items-center"
+      >
+        <h1 class="HEAD">PORTFOLIO</h1>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-list"></i>
+            <!-- Hamburger icon from Bootstrap Icons -->
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">ABOUT ME</a></li>
+            <li>
+              <a class="dropdown-item" href="OTG-PORTFOLIO.html">PORTFOLIO</a>
+            </li>
+            <li><a class="dropdown-item" href="OTG-SHOP.html">SHOP</a></li>
+            <li>
+              <a class="dropdown-item" href="OTG-SCHEDULE.html">SCHEDULE</a>
+            </li>
+            <li><a class="dropdown-item" href="OTG-REVIEW.html">REVIEW</a></li>
+            <li>
+              <a class="dropdown-item" href="OTG-CONTACT.html">CONTACT</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </header>
 
-    <p class="PARA"> THIS IS MY WORK OF ART. </p>
+    <p class="PARA">THIS IS MY WORK OF ART.</p>
 
     <div class="album py-5 bg-body-tertiary">
-        <div class="container"> <!-- Container for all imaages-->
+      <div class="container">
+        <!-- Container for all imaages-->
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <!-- 1 row with three pictures-->
-                <div class="col">
-                    <!--  -->
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!--
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <!-- 1 row with three pictures-->
+          <div class="col">
+            <!--  -->
+            <div class="card shadow-sm">
+              <svg
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <!--
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                         -->
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
+                  <small class="text-body-secondary">9 mins</small>
                 </div>
-                <div class="col"> <!---->
-                    <div class="card shadow-sm">
-                        <img src="../ASSETS/IMG_3064.jpg" class="card-img-top" alt="Photography Showcase" width="100" height="225">
-                        <div class="card-body">
-                            <p class="card-text">Capturing moments with precision and creativity. Explore my latest photography projects.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-body-secondary">3 days ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!--
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        -->
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="col">
+            <!---->
+            <div class="card shadow-sm">
+              <img
+                src="../ASSETS/IMG_3064.jpg"
+                class="card-img-top"
+                alt="Photography Showcase"
+                width="100"
+                height="225"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Capturing moments with precision and creativity. Explore my
+                  latest photography projects.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary">3 days ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg
+                class="bd-placeholder-img card-img-top"
+                width="100%"
+                height="225"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <!--
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        -->
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

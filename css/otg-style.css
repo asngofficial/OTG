@@ -1,88 +1,88 @@
 .HEAD {
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 80px;
-    color: white;
-    padding: 0 20px; /* Remove vertical padding to avoid height mismatch */
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px; /* Explicit height for alignment */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    white-space: nowrap;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 80px;
+  color: white;
+  padding: 0 20px; /* Remove vertical padding to avoid height mismatch */
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* Explicit height for alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
 }
 
 /* Menu button styling */
 .dropdown {
-    background-color: black;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    position: fixed; /* Keeps menu bar fixed in set location*/
-    top: 30px; /* Adjust this value to move up or down */
-    right: 0; /* Keeps menu at extreme right*/
+  background-color: black;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  position: fixed; /* Keeps menu bar fixed in set location*/
+  top: 30px; /* Adjust this value to move up or down */
+  right: 0; /* Keeps menu at extreme right*/
 }
 
 .dropdown-toggle {
-    font-size: 18px;
-    padding: 15px 20px; /* Slightly more padding to align vertically */
-    background-color: black;
-    border: none;
-    color: white;
+  font-size: 18px;
+  padding: 15px 20px; /* Slightly more padding to align vertically */
+  background-color: black;
+  border: none;
+  color: white;
 }
 
 /* Dropdown menu items */
 .dropdown-menu {
-    background-color: black;
-    border: none;
-    color: white;
+  background-color: black;
+  border: none;
+  color: white;
 }
 
 /* Content below the header */
 .PARA {
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 30px;
-    text-align: left;
-    margin: 20px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin: 20px;
 }
 
 /* Body margin adjustment */
 body {
-    background-color: white;
-    margin: 0;
-    padding-top: 120px;
+  background-color: white;
+  margin: 0;
+  padding-top: 120px;
 }
 
 /* Ensuring dropdown button and header text are aligned horizontally */
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
-.bi{
-    height: 100px;
-    width: 100px;
+.bi {
+  height: 100px;
+  width: 100px;
 }
 
-.icon-container svg{
-    fill: black;
+.icon-container svg {
+  fill: black;
 }
 
 /* move the position of the div container on CONTACT ME page... just trying to center the icons */
-.shift-up { 
-    position: relative;
-    top: 180px; /* Adjust the value as needed */
+.shift-up {
+  position: relative;
+  top: 180px; /* Adjust the value as needed */
 }
 
 /* adjust the size of photo in ABOUT ME */
 .profile-pic {
-    width: 150px; /* Adjust to your desired size */
-    height: 150px; /* Ensures the aspect ratio remains 1:1 */
-    object-fit: cover; /* Makes sure the image fills the circle properly */
+  width: 150px; /* Adjust to your desired size */
+  height: 150px; /* Ensures the aspect ratio remains 1:1 */
+  object-fit: cover; /* Makes sure the image fills the circle properly */
 }
