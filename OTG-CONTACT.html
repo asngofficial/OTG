@@ -4,22 +4,18 @@
     <title>OTG</title>
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="../node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.css"
-    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Suggested by bootstrap for proper responsive behavior on mobile devices -->
-    <link rel="stylesheet" href="../css/otg-style.css" />
+    <link rel="stylesheet" href="./css/otg-style.css" />
     <!-- My css file -->
-    <script src="../JS/otg-script.js"></script>
+    <script src="./JS/otg-script.js"></script>
     <!-- My js file -->
   </head>
 
@@ -28,7 +24,7 @@
       <div
         class="header-container d-flex justify-content-between align-items-center"
       >
-        <h1 class="HEAD">SCHEDULE</h1>
+        <h1 class="HEAD">CONTACT</h1>
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -60,10 +56,7 @@
     <div class="container my-5">
       <div class="row">
         <div class="col-md-6">
-          <div id="calendar"></div>
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-center mb-4">Book an Appointment</h2>
+          <h2 class="text-center mb-4">Send a Message</h2>
           <form>
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
@@ -74,41 +67,27 @@
               <input type="email" class="form-control" id="email" />
             </div>
             <div class="mb-3">
-              <label for="date" class="form-label">Date</label>
-              <input type="text" class="form-control" id="date" readonly />
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+              ></textarea>
             </div>
-            <div class="mb-3">
-              <label for="time" class="form-label">Time</label>
-              <select class="form-select" id="time">
-                <option selected>Select a time</option>
-                <option value="09:00">09:00 AM</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="12:00">12:00 PM</option>
-                <option value="13:00">01:00 PM</option>
-                <option value="14:00">02:00 PM</option>
-                <option value="15:00">03:00 PM</option>
-                <option value="16:00">04:00 PM</option>
-                <option value="17:00">05:00 PM</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Book Now</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           </form>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center mb-4">Find Me Here</h2>
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.268949683312!2d-97.1341396848176!3d32.7830609809685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e734b4736c8b7%3A0x7b4b4b4b4b4b4b4b!2sUniversity%20of%20North%20Texas!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
-      <script src="../node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const calendar = new VanillaCalendar('#calendar', {
-          actions: {
-            clickDay(event, self) {
-              const date = self.selectedDates[0];
-              document.getElementById('date').value = date;
-            },
-          },
-        });
-      });
-    </script>
   </body>
 </html>
