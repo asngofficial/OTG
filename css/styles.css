@@ -1,9 +1,15 @@
+:root {
+  --sea-green: #3A8963;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
 .HEAD {
   font-family: 'Arial Black', Arial, sans-serif;
   font-size: 80px;
-  color: white;
+  color: var(--white);
   padding: 0 20px; /* Remove vertical padding to avoid height mismatch */
-  background-color: black;
+  background-color: var(--black);
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +23,7 @@
 
 /* Menu button styling */
 .dropdown {
-  background-color: black;
+  background-color: var(--black);
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -30,16 +36,16 @@
 .dropdown-toggle {
   font-size: 18px;
   padding: 15px 20px; /* Slightly more padding to align vertically */
-  background-color: black;
+  background-color: var(--black);
   border: none;
-  color: white;
+  color: var(--white);
 }
 
 /* Dropdown menu items */
 .dropdown-menu {
-  background-color: black;
+  background-color: var(--black);
   border: none;
-  color: white;
+  color: var(--white);
 }
 
 /* Content below the header */
@@ -52,7 +58,7 @@
 
 /* Body margin adjustment */
 body {
-  background-color: white;
+  background-color: var(--white);
   margin: 0;
   padding-top: 120px;
   font-family: "Times New Roman", Times, serif;
@@ -74,7 +80,7 @@ body {
 }
 
 .icon-container svg {
-  fill: black;
+  fill: var(--black);
 }
 
 /* move the position of the div container on CONTACT ME page... just trying to center the icons */
@@ -88,4 +94,15 @@ body {
   width: 150px; /* Adjust to your desired size */
   height: 150px; /* Ensures the aspect ratio remains 1:1 */
   object-fit: cover; /* Makes sure the image fills the circle properly */
+}
+
+.btn-primary {
+  background-color: var(--sea-green);
+  border-color: var(--sea-green);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--sea-green), 10%); /* Example hover effect */
+  border-color: darken(var(--sea-green), 10%);
 }
