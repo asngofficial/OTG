@@ -55,6 +55,8 @@ body {
   background-color: white;
   margin: 0;
   padding-top: 120px;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
 }
 
 /* Ensuring dropdown button and header text are aligned horizontally */
