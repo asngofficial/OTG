@@ -63,49 +63,205 @@
         <div class="col-md-6">
           <div id="calendar"></div>
         </div>
-        <div class="col-md-6">
-          <h2 class="text-center mb-4">Book an Appointment</h2>
+        <div class="col-md-6 mx-auto">
+          <h2 class="text-center mb-4">Photography Booking Form</h2>
           <form>
+            <h4>1. Contact Information</h4>
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" />
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" />
+              <input type="email" class="form-control" id="email" required />
             </div>
             <div class="mb-3">
-              <label for="date" class="form-label">Date</label>
-              <input type="text" class="form-control" id="date" readonly />
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" />
             </div>
             <div class="mb-3">
-              <label for="time" class="form-label">Time</label>
-              <select class="form-select" id="time">
-                <option selected>Select a time</option>
-                <option value="09:00">09:00 AM</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="12:00">12:00 PM</option>
-                <option value="13:00">01:00 PM</option>
-                <option value="14:00">02:00 PM</option>
-                <option value="15:00">03:00 PM</option>
-                <option value="16:00">04:00 PM</option>
-                <option value="17:00">05:00 PM</option>
+              <label for="contactMethod" class="form-label"
+                >Preferred Contact Method</label
+              >
+              <select class="form-select" id="contactMethod">
+                <option value="text">Text</option>
+                <option value="email">Email</option>
+                <option value="call">Call</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary">Book Now</button>
+
+            <h4 class="mt-4">2. Session Details</h4>
+            <div class="mb-3">
+              <label for="sessionType" class="form-label">Session Type</label>
+              <select class="form-select" id="sessionType">
+                <option value="portrait">Portrait</option>
+                <option value="group">Group</option>
+                <option value="event">Event</option>
+                <option value="brand">Brand</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="desiredDateTime" class="form-label"
+                >Desired Date & Time</label
+              >
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="desiredDateTime"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="estimatedDuration" class="form-label"
+                >Estimated Duration</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="estimatedDuration"
+                placeholder="e.g., 1-2 hours"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label">Location</label>
+              <select class="form-select" id="location">
+                <option value="outdoor">Outdoor</option>
+                <option value="studio">Studio</option>
+                <option value="eventVenue">Event Venue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="studioAddon"
+              />
+              <label class="form-check-label" for="studioAddon">
+                Studio Add-on ($75/hr)?
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="travelAddon"
+              />
+              <label class="form-check-label" for="travelAddon">
+                Travel Outside City? (may add $25 gas fee)
+              </label>
+            </div>
+
+            <h4 class="mt-4">3. Creative Direction</h4>
+            <div class="mb-3">
+              <label for="vision" class="form-label"
+                >Describe your vision or theme</label
+              >
+              <textarea class="form-control" id="vision" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="outfits" class="form-label"
+                >Outfit(s) planned (include colors or styles)</label
+              >
+              <input type="text" class="form-control" id="outfits" />
+            </div>
+            <div class="mb-3">
+              <label for="outfitChanges" class="form-label"
+                >Number of outfit changes (each +$25)</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="outfitChanges"
+                min="0"
+                value="0"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="props" class="form-label"
+                >Props needed or provided?</label
+              >
+              <input type="text" class="form-control" id="props" />
+            </div>
+            <div class="mb-3">
+              <label for="moodReference" class="form-label"
+                >Mood or aesthetic reference (upload example or Pinterest
+                link)</label
+              >
+              <input type="text" class="form-control" id="moodReference" />
+            </div>
+
+            <h4 class="mt-4">4. Deliverables</h4>
+            <div class="mb-3">
+              <p>Standard 30 edited photos</p>
+            </div>
+            <div class="mb-3">
+              <label for="extraPhotos" class="form-label"
+                >Extra photo bundle?</label
+              >
+              <select class="form-select" id="extraPhotos">
+                <option value="none">None</option>
+                <option value="10for40">10 for $40</option>
+                <option value="5each">$5 each</option>
+              </select>
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="rushDelivery"
+              />
+              <label class="form-check-label" for="rushDelivery">
+                Rush delivery (+$50)?
+              </label>
+            </div>
+
+
+            <h4 class="mt-4">5. Agreement</h4>
+            <p>
+              A non-refundable <strong>$50 deposit</strong> confirms booking.
+            </p>
+            <p>Remaining balance due on or before session day.</p>
+            <p>Late arrivals reduce shooting time.</p>
+            <p>Rescheduling allowed with 48-hour notice.</p>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="agreeTerms"
+                required
+              />
+              <label class="form-check-label" for="agreeTerms">
+                I agree to the terms above.
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="signature" class="form-label">Signature</label>
+              <input type="text" class="form-control" id="signature" />
+            </div>
+            <div class="mb-3">
+              <label for="agreementDate" class="form-label">Date</label>
+              <input type="date" class="form-control" id="agreementDate" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
           </form>
         </div>
       </div>
     </div>
-      <script src="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+    <script src="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const calendar = new VanillaCalendar('#calendar', {
           actions: {
             clickDay(event, self) {
               const date = self.selectedDates[0];
-              document.getElementById('date').value = date;
+              document.getElementById('desiredDateTime').value = date;
             },
           },
         });
