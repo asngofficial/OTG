@@ -24,6 +24,7 @@
   position: fixed; /* Keeps menu bar fixed in set location*/
   top: 30px; /* Adjust this value to move up or down */
   right: 0; /* Keeps menu at extreme right*/
+  z-index: 1050; /* Ensure dropdown is above other content */
 }
 
 .dropdown-toggle {
