@@ -45,7 +45,21 @@
 .dropdown-menu {
   background-color: var(--black);
   border: none;
-  color: var(--white);
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--white); /* Ensure text is white */
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: var(--sea-green); /* Change background on hover/focus */
+  color: var(--white); /* Keep text white on hover/focus */
+}
+
+.dropdown-menu .dropdown-item.active {
+  background-color: var(--sea-green); /* Change background for active item */
+  color: var(--white); /* Keep text white for active item */
 }
 
 /* Content below the header */
