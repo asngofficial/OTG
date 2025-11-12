@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html>
   <head>
-    <title>OTG</title>
+    <title>OTG PHOTOGRAPHY</title>
     
     <link
       rel="stylesheet"
@@ -12,16 +12,10 @@
       href="css/bootstrap-icons.css"
     />
     <script src="js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Suggested by bootstrap for proper responsive behavior on mobile devices -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- My css file -->
     <script src="js/main.js"></script>
     <!-- My js file -->
+    <!-- Relax CSP for Cal.com embed -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cal.com https://*.cal.com https://s3.amazonaws.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cal.com https://*.cal.com https://s3.amazonaws.com; style-src 'self' 'unsafe-inline' https://cal.com https://*.cal.com https://s3.amazonaws.com; img-src 'self' data: https://cal.com https://*.cal.com https://s3.amazonaws.com; connect-src 'self' https://cal.com https://*.cal.com https://s3.amazonaws.com; frame-src https://cal.com https://*.cal.com;">
   </head>
 
   <body>
@@ -60,213 +54,20 @@
     </header>
 
     <div class="container my-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div id="calendar"></div>
-        </div>
-        <div class="col-md-6 mx-auto">
-          <h2 class="text-center mb-4">Photography Booking Form</h2>
-          <form>
-            <h4>1. Contact Information</h4>
-            <div class="mb-3">
-              <label for="fullName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fullName" required />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required />
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" />
-            </div>
-            <div class="mb-3">
-              <label for="contactMethod" class="form-label"
-                >Preferred Contact Method</label
-              >
-              <select class="form-select" id="contactMethod">
-                <option value="text">Text</option>
-                <option value="email">Email</option>
-                <option value="call">Call</option>
-              </select>
-            </div>
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-photoshoot"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "photoshoot", {origin:"https://app.cal.com"});
 
-            <h4 class="mt-4">2. Session Details</h4>
-            <div class="mb-3">
-              <label for="sessionType" class="form-label">Session Type</label>
-              <select class="form-select" id="sessionType">
-                <option value="portrait">Portrait</option>
-                <option value="group">Group</option>
-                <option value="event">Event</option>
-                <option value="brand">Brand</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="desiredDateTime" class="form-label"
-                >Desired Date & Time</label
-              >
-              <input
-                type="datetime-local"
-                class="form-control"
-                id="desiredDateTime"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="estimatedDuration" class="form-label"
-                >Estimated Duration</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="estimatedDuration"
-                placeholder="e.g., 1-2 hours"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="location" class="form-label">Location</label>
-              <select class="form-select" id="location">
-                <option value="outdoor">Outdoor</option>
-                <option value="studio">Studio</option>
-                <option value="eventVenue">Event Venue</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="studioAddon"
-              />
-              <label class="form-check-label" for="studioAddon">
-                Studio Add-on ($75/hr)?
-              </label>
-            </div>
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="travelAddon"
-              />
-              <label class="form-check-label" for="travelAddon">
-                Travel Outside City? (may add $25 gas fee)
-              </label>
-            </div>
+  Cal.ns.photoshoot("inline", {
+    elementOrSelector:"#my-cal-inline-photoshoot",
+    config: {"layout":"week_view"},
+    calLink: "olathegrapher/photoshoot",
+  });
 
-            <h4 class="mt-4">3. Creative Direction</h4>
-            <div class="mb-3">
-              <label for="vision" class="form-label"
-                >Describe your vision or theme</label
-              >
-              <textarea class="form-control" id="vision" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="outfits" class="form-label"
-                >Outfit(s) planned (include colors or styles)</label
-              >
-              <input type="text" class="form-control" id="outfits" />
-            </div>
-            <div class="mb-3">
-              <label for="outfitChanges" class="form-label"
-                >Number of outfit changes (each +$25)</label
-              >
-              <input
-                type="number"
-                class="form-control"
-                id="outfitChanges"
-                min="0"
-                value="0"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="props" class="form-label"
-                >Props needed or provided?</label
-              >
-              <input type="text" class="form-control" id="props" />
-            </div>
-            <div class="mb-3">
-              <label for="moodReference" class="form-label"
-                >Mood or aesthetic reference (upload example or Pinterest
-                link)</label
-              >
-              <input type="text" class="form-control" id="moodReference" />
-            </div>
-
-            <h4 class="mt-4">4. Deliverables</h4>
-            <div class="mb-3">
-              <p>Standard 30 edited photos</p>
-            </div>
-            <div class="mb-3">
-              <label for="extraPhotos" class="form-label"
-                >Extra photo bundle?</label
-              >
-              <select class="form-select" id="extraPhotos">
-                <option value="none">None</option>
-                <option value="10for40">10 for $40</option>
-                <option value="5each">$5 each</option>
-              </select>
-            </div>
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="rushDelivery"
-              />
-              <label class="form-check-label" for="rushDelivery">
-                Rush delivery (+$50)?
-              </label>
-            </div>
-
-
-            <h4 class="mt-4">5. Agreement</h4>
-            <p>
-              A non-refundable <strong>$50 deposit</strong> confirms booking.
-            </p>
-            <p>Remaining balance due on or before session day.</p>
-            <p>Late arrivals reduce shooting time.</p>
-            <p>Rescheduling allowed with 48-hour notice.</p>
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="agreeTerms"
-                required
-              />
-              <label class="form-check-label" for="agreeTerms">
-                I agree to the terms above.
-              </label>
-            </div>
-            <div class="mb-3">
-              <label for="signature" class="form-label">Signature</label>
-              <input type="text" class="form-control" id="signature" />
-            </div>
-            <div class="mb-3">
-              <label for="agreementDate" class="form-label">Date</label>
-              <input type="date" class="form-control" id="agreementDate" />
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit Booking</button>
-          </form>
-        </div>
-      </div>
+  Cal.ns.photoshoot("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#fafafa"},"dark":{"cal-brand":"#3A8963"}},"hideEventTypeDetails":false,"layout":"week_view"});
+  </script>
+  <!-- Cal inline embed code ends -->
     </div>
-    <script src="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const calendar = new VanillaCalendar('#calendar', {
-          actions: {
-            clickDay(event, self) {
-              const date = self.selectedDates[0];
-              document.getElementById('desiredDateTime').value = date;
-            },
-          },
-        });
-      });
-    </script>
   </body>
 </html>
