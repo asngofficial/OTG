@@ -130,4 +130,8 @@ body {
   .dropdown {
     top: 10px; /* Adjust dropdown position for smaller header */
   }
+
+  .dropdown-menu .dropdown-item {
+    color: var(--white) !important; /* Ensure text is white on mobile */
+  }
 }
